@@ -8,8 +8,6 @@ To perform ideal sampling on a continuous-time signal and reconstruct it using P
 
 ### **PROGRAM**  
 ```python
-# Ideal Sampling (Impulse Sampling) and Reconstruction
-
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import resample
@@ -38,7 +36,6 @@ signal_sampled = np.sin(2 * np.pi * f * t_sampled)
 
 # Plot sampled signal
 plt.figure(figsize=(10, 4))
-plt.plot(t, signal, label='Continuous Signal', alpha=0.7)
 plt.stem(t_sampled, signal_sampled, linefmt='r-', markerfmt='ro', basefmt='r-', label='Sampled Signal (fs = 100 Hz)')
 plt.title('Sampling of Continuous Signal (fs = 100 Hz)')
 plt.xlabel('Time [s]')
@@ -50,9 +47,8 @@ plt.show()
 # Reconstruct the signal
 reconstructed_signal = resample(signal_sampled, len(t))
 
-# Plot reconstructed signal
+# Plot only the reconstructed signal
 plt.figure(figsize=(10, 4))
-plt.plot(t, signal, label='Continuous Signal', alpha=0.7)
 plt.plot(t, reconstructed_signal, 'r--', label='Reconstructed Signal (fs = 100 Hz)')
 plt.title('Reconstruction of Sampled Signal (fs = 100 Hz)')
 plt.xlabel('Time [s]')
@@ -60,12 +56,14 @@ plt.ylabel('Amplitude')
 plt.grid(True)
 plt.legend()
 plt.show()
+
 ```
 
 ### **PROGRAM OUTPUT**  
-![image](https://github.com/user-attachments/assets/e0d2976f-4a6d-4a2f-9a1e-07ad3540275a)
-![image](https://github.com/user-attachments/assets/9017b015-cff1-4903-b836-98ca71fdd852)
-![image](https://github.com/user-attachments/assets/a552f5e3-4251-40cf-904a-ae663c560bf1)
+![image](https://github.com/user-attachments/assets/5b28355d-6bb4-4b06-bde4-f8e1bd2e6731)
+![image](https://github.com/user-attachments/assets/f95a6c82-39da-44dc-bd82-7b9c25b0305f)
+![image](https://github.com/user-attachments/assets/cdd14900-fc7b-4532-b18f-07afc3a6753a)
+
 
 
 ### **RESULT**  
