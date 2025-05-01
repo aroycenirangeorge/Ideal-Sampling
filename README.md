@@ -68,3 +68,7 @@ plt.show()
 
 ### **RESULT**  
 Thus, ideal sampling and reconstruction of a continuous-time signal were successfully performed using Python.
+
+### **Output Waveform - Hardware Experiment**
+![WhatsApp Image 2025-05-01 at 22 42 22_6d31d19b](https://github.com/user-attachments/assets/8288c3de-396a-45de-989b-f3975d5efe92)
+
